@@ -1,56 +1,65 @@
-# SentinelAI AWS Architecture
+SentinelAI AWS Architecture
+Overview
 
-## Overview
+SentinelAI is an autonomous multi-sensor Counter-UAS mission control prototype designed to protect a 1 km² Forward Operating Base (FOB). The prototype demonstrates real-time aerial threat simulation, live mission visualization, trajectory prediction, and AI-assisted threat classification.
 
-SentinelAI is an autonomous multi-sensor Counter-UAS mission control system for protecting a 1 km² Forward Operating Base.
+Prototype Data Flow
+The UAO simulator generates continuous live telemetry.
+Telemetry is written to a live dataset.
+Mission Control reads the telemetry and updates the tactical display in real time.
+Amazon Bedrock Nova Micro is used to demonstrate AI-based threat classification and countermeasure reasoning.
+Amazon Kinesis Data Streams was provisioned as the planned real-time streaming layer for future integration.
+AWS Services Implemented
+Amazon Bedrock (Nova Micro) – AI threat classification demonstration
+Amazon Kinesis Data Streams – Provisioned streaming infrastructure
+GitHub – Source control and project collaboration
+Prototype Architecture
+UAO Simulator
+        │
+        ▼
+Live Telemetry Dataset (CSV)
+        │
+        ▼
+Mission Control Dashboard (Streamlit)
+        │
+        ├────────► Tactical Map
+        ├────────► Threat Queue
+        ├────────► AI Decision Panel
+        └────────► Mission Status
+Production AWS Architecture (Future Deployment)
 
-## Data Flow
+The prototype is designed to evolve into a fully cloud-native architecture:
 
-1. Edge sensors detect aerial contacts.
-2. UAO simulator generates live telemetry.
-3. Events stream into Amazon Kinesis.
-4. AWS Lambda processes each detection.
-5. Amazon Bedrock classifies threat intent.
-6. Results are stored in Amazon S3.
-7. Amazon Athena queries historical events.
-8. Amazon QuickSight visualizes performance metrics.
-9. Mission Control displays live tactical decisions.
-
-## AWS Services Used
-
-- Amazon Kinesis Data Streams
-- AWS Lambda
-- Amazon Bedrock Nova Micro
-- Amazon S3
-- Amazon Athena
-- Amazon QuickSight
-- Amazon Rekognition
-- AWS IAM
-- Amazon CloudWatch
-
-## Architecture
-
-```text
 Edge Sensors / UAO Simulator
-        |
-        v
+        │
+        ▼
 Amazon Kinesis Data Streams
-        |
-        v
-AWS Lambda Processing Layer
-        |
-        v
+        │
+        ▼
+AWS Lambda
+        │
+        ▼
 Amazon Bedrock Nova Micro
-        |
-        v
-Threat Classification + ROE Engine
-        |
-        v
-Amazon S3 Data Lake
-        |
-        +------> Amazon Athena
-        |
-        +------> Amazon QuickSight
-        |
-        v
-SentinelAI Mission Control Dashboard
+        │
+        ▼
+Threat Classification & ROE Engine
+        │
+        ▼
+Amazon S3
+        │
+        ├────────► Amazon Athena
+        ├────────► Amazon QuickSight
+        └────────► Mission Control Dashboard
+Future AWS Services
+
+The production architecture is designed to integrate:
+
+Amazon Kinesis Data Streams
+AWS Lambda
+Amazon Bedrock Nova Micro
+Amazon S3
+Amazon Athena
+Amazon QuickSight
+Notes
+
+This hackathon prototype demonstrates the complete operational workflow using a local simulator and Mission Control dashboard. Amazon Bedrock was successfully tested for AI-based threat reasoning, and Amazon Kinesis was provisioned as the planned streaming layer. The remaining AWS services are part of the proposed production deployment and were not implemented during the hackathon timeframe.
