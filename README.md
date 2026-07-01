@@ -233,6 +233,10 @@ requirements.txt
 # Authors
 
 Developed as part of the **AWS DC Summit 2026 Global Government Hackathon**.
+
+
+
+
 Abubakr Barakzai, Hamza Wardak
 
 Project: **SentinelAI**
