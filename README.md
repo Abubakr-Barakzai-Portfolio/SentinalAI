@@ -27,7 +27,7 @@ SentinelAI provides a prototype mission control system that assists operators wi
 
 # Features
 
-### Live UAO Simulator
+### Live UAS Simulator
 
 - Continuous real-time aircraft simulation
 - Multiple aircraft behaviors:
