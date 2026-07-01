@@ -192,12 +192,19 @@ The simulator continuously generates live telemetry while the Mission Control da
 
 # Prototype Capabilities & Sucess Metrics
 
-- Real-time telemetry updates every 2 seconds
-- Multiple simulated aircraft behaviors
-- Live trajectory prediction
-- Threat prioritization
-- AI-assisted threat reasoning
-- Interactive mission control visualization
+The current SentinelAI prototype demonstrates the following capabilities:
+
+- Continuous real-time UAS telemetry generation with updates every 2 seconds
+- Live tactical Mission Control dashboard built with Streamlit
+- Multi-target tracking with unique aircraft identification
+- Simulated aircraft behaviors including attack, reconnaissance, loitering, friendly patrol, and wildlife
+- Real-time trajectory prediction and flight path visualization
+- Threat prioritization based on distance, flight behavior, and sensor confidence
+- AI-assisted threat classification demonstrated using Amazon Bedrock Nova Micro
+- Countermeasure recommendations based on assessed threat level
+- Defense zone visualization around the Forward Operating Base (FOB)
+- Interactive operational view showing mission status, threat queue, AI decision panel, and aircraft tracking information
+- Modular architecture designed for future integration with Amazon Kinesis, AWS Lambda, Amazon S3, Amazon Athena, and Amazon QuickSight
 
 ---
 
@@ -226,5 +233,6 @@ requirements.txt
 # Authors
 
 Developed as part of the **AWS DC Summit 2026 Global Government Hackathon**.
+Abubakr Barakzai, Hamza Wardak
 
 Project: **SentinelAI**
