@@ -147,7 +147,7 @@ AWS Lambda (Automatically process each incoming event)
 Amazon Bedrock (AI threat reasoning)
         │
         ▼
-Threat Classification 
+AI Threat Classification 
         │
         ▼
 Amazon S3 (Store operational history)
