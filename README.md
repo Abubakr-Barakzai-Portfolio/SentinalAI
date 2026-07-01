@@ -123,13 +123,13 @@ Planned Production Architecture
 ## Prototype
 
 ```
-UAS Simulator (Data)
+Python UAS Simulator
         │
         ▼
-Live Telemetry Dataset
+Live Telemetry (CSV)
         │
         ▼
-Mission Control Dashboard & Amazon Quick
+Mission Control Dashboard (Streamlit) (Amazon Quick)
 ```
 
 ## Production Architecture
