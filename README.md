@@ -190,14 +190,14 @@ The simulator continuously generates live telemetry while the Mission Control da
 
 ---
 
-# Prototype Capabilities
+# Prototype Capabilities & Sucess Metrics
 
--Real-time telemetry updates every 2 seconds
--Multiple simulated aircraft behaviors
--Live trajectory prediction
--Threat prioritization
--AI-assisted threat reasoning
--Interactive mission control visualization
+- Real-time telemetry updates every 2 seconds
+- Multiple simulated aircraft behaviors
+- Live trajectory prediction
+- Threat prioritization
+- AI-assisted threat reasoning
+- Interactive mission control visualization
 
 ---
 
