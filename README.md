@@ -93,7 +93,7 @@ and returns:
 # Technologies
 
 ## Map live data
--Streamlit (Used for live data map tracking of UAO)
+-Streamlit (Used for live data map tracking of UAS)
 ## Programming
 
 - Python
@@ -107,7 +107,7 @@ Implemented
 
 - Amazon Bedrock (Nova Micro)
 - Amazon Quick (Dashboard and data)
-- Kiro (Troubleshooting, finding what we had access to)
+- Kiro – (Assisted with software development, troubleshooting, architecture refinement, and accelerating implementation during the hackathon.)
 
 Planned Production Architecture
 
@@ -123,7 +123,7 @@ Planned Production Architecture
 ## Prototype
 
 ```
-UAO Simulator (Data)
+UAS Simulator (Data)
         │
         ▼
 Live Telemetry Dataset
